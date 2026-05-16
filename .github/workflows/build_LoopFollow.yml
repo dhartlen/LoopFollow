@@ -194,10 +194,13 @@ jobs:
             echo "table_printer.rb not found"
             exit 1
           fi
-  
-      # Install project dependencies
+      # Update Fastlan
       - name: Install Project Dependencies
         run: bundle install
+        
+      # Install project dependencies
+      - name: Update Fastlane
+        run: bundle update fastlane
 
       # Sync the GitHub runner clock with the Windows time server (workaround as suggested in https://github.com/actions/runner/issues/2996)
       - name: Sync clock
