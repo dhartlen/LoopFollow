@@ -194,8 +194,6 @@ jobs:
             echo "table_printer.rb not found"
             exit 1
           fi
-- name: Update Fastlane
-  run: bundle update fastlane
   
       # Install project dependencies
       - name: Install Project Dependencies
